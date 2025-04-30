@@ -10,3 +10,8 @@
 
 .right {
 }
+
+mat-list-option[aria-selected="true"] {
+  background: aliceblue;
+  border-left: 4px solid blue;
+}

@@ -1,8 +1,15 @@
 <div class="content">
   <div class="left">
-    <mat-list>
-      <!-- <mat-list-item>Item 1</mat-list-item> -->
-    </mat-list>
+    <mat-selection-list multiple="false" hideSingleSelectionIndicator="true">
+      @for (note of noteList; track note.id) {
+      <mat-list-option>
+        <span matListItemTitle>{{ note.title }}</span>
+        <span matListItemLine>{{ note.content }}</span>
+      </mat-list-option>
+      } @empty {
+      <mat-list-item disabled="true">No Notes</mat-list-item>
+      }
+    </mat-selection-list>
   </div>
   <div class="right"></div>
 </div>
